@@ -1,19 +1,34 @@
-#include "main.h"
+#include <stdio.h>
+
 /**
- *  _isupper - a function that checks for uppercase character.
- *  @c: An input integer
- *  Return: 1 if c is uppercase, 0 if otherwise
+ * main - prints Buzz each numbers of 3 and 5.
+ * Return: Always 0.
  */
-int _isupper(int c)
+int main(void)
 {
-	char i;
-	int upper = 0;
+	int n;
 
-	for (i = 'A'; i  <= 'Z'; i++)
+	n = 1;
+	printf("%d", n);
+	for (n = 2; n <= 100; n++)
 	{
-		if (i == c)
-			upper = 1;
+		if ((n % 3 == 0) && (n % 5 == 0))
+		{
+			printf(" FizzBuzz");
+		}
+		else if (n % 3 == 0)
+		{
+			printf(" Fizz");
+		}
+		else if (n % 5 == 0)
+		{
+			printf(" Buzz");
+		}
+		else
+		{
+			printf(" %d", n);
+		}
 	}
-	return (upper);
+	printf("\n");
+	return (0);
 }
-
